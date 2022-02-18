@@ -1,0 +1,90 @@
+<script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+
+<style>
+  .arjs-loader {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .arjs-loader div {
+    text-align: center;
+    font-size: 1.25em;
+    color: white;
+  }
+</style>
+
+<body style="margin: 0px; overflow: hidden">
+  <!-- minimal loader shown until image descriptors are loaded -->
+  <div class="arjs-loader">
+    <div>Loading, please wait...</div>
+  </div>
+  <a-scene
+    vr-mode-ui="enabled: false;"
+    renderer="logarithmicDepthBuffer: true;"
+    embedded
+    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
+  >
+    
+    <!-- watch1 -->
+    <a-nft
+      type="nft"
+      url="https://cdn.glitch.global/dafb60cb-f048-40d5-a949-9c87e5c84b8b/watch1"
+      smooth="true"
+      smoothcount="10"
+      smoothtolerance=".01"
+      smooththreshold="5"
+    >
+      <a-entity
+        gltf-model="https://cdn.glitch.global/dafb60cb-f048-40d5-a949-9c87e5c84b8b/watch1.glb?v=1644277806904"
+        scale="50 50 50"
+        position="0 0 0"
+        rotation="0 90 90"
+      >
+      </a-entity>
+    </a-nft>
+    <!-- watch 2-->
+    <a-nft
+      type="nft"
+      url="https://cdn.glitch.global/dafb60cb-f048-40d5-a949-9c87e5c84b8b/watch2"
+      smooth="true"
+      smoothcount="10"
+      smoothtolerance=".01"
+      smooththreshold="5"
+    >
+      <a-entity
+        gltf-model="https://cdn.glitch.global/dafb60cb-f048-40d5-a949-9c87e5c84b8b/watch2.glb?v=1644277560287"
+        scale="50 50 50"
+        position="0 0 0"
+        rotation="-90 180 180"
+      >
+      </a-entity>
+    </a-nft>
+    <!-- watch 3-->
+    <a-nft
+      type="nft"
+      url="https://cdn.glitch.global/dafb60cb-f048-40d5-a949-9c87e5c84b8b/watch"
+      smooth="true"
+      smoothcount="10"
+      smoothtolerance=".01"
+      smooththreshold="5"
+    >
+      <a-entity
+        gltf-model="https://cdn.glitch.global/dafb60cb-f048-40d5-a949-9c87e5c84b8b/watch3.glb?v=1644268787987"
+        scale="25 25 25"
+        position="0 0 0"
+        rotation="0 90 0"
+      >
+      </a-entity>
+    </a-nft>
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
